@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/1.InheritanceWorkshop/">
-    <Project Path="InheritanceWorkshopBackend/InheritanceWorkshopBackend.csproj" />
+    <Project Path="InheritanceWorkshopBackend/InheritanceWorkshopBackend.csproj" Id="1b70c2ba-6485-462d-9e47-b99872cc45b6" />
     <Project Path="InheritanceWorkshopFrontend/InheritanceWorkshopFrontend.csproj" />
   </Folder>
 </Solution>

@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\InheritanceWorkshopBackend\InheritanceWorkshopBackend.csproj" />
-  </ItemGroup>
-
 </Project>

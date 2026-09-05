@@ -1,25 +1,36 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    public abstract GeometricFigure()
-    { 
-    
-    }
-    //Properties
-    public int Name 
-    { 
-        get; 
-        set; 
-    }
-
-    //Constructors
-    public GeometricFigure() 
-    { 
-
-        
-    }
-    //Public Methods
-    public override string ToString()
+    public abstract class GeometricFigure
     {
-        return;
+
+        //Properties
+        public int Name
+        {
+            get;
+            set;
+        }
+
+        //Constructors
+        protected GeometricFigure()
+        {
+
+        }
+
+        //Public Methods
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        public int GetArea() 
+        { 
+        
+        }
+
+        public abstract int GetPerimeter() 
+        { 
+        
+        }
+
     }
 }
