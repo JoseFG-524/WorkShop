@@ -1,14 +1,25 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    public class Trapeze
-    {
-        //Fields
-        private int _id;
-        
-        //Constructors
-        public Trapeze()
-        {
+    public abstract GeometricFigure()
+    { 
+    
+    }
+    //Properties
+    public int Name 
+    { 
+        get; 
+        set; 
+    }
 
-        }
+    //Constructors
+    public GeometricFigure() 
+    { 
+
+        
+    }
+    //Public Methods
+    public override string ToString()
+    {
+        return;
     }
 }
