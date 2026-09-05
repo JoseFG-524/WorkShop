@@ -19,7 +19,9 @@
         //Public Methods
         public override string ToString()
         {
-            return base.ToString();
+            return $"{Name}\n" +
+               $"  => Area.....: {GetArea(),11:N5}\n" +
+               $"  => Perimeter: {GetPerimiter(),11:N5}\n";
         }
 
         public int GetArea() 
