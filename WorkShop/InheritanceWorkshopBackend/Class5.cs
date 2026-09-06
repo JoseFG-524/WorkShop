@@ -1,6 +1,6 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Kite : Rhombus
+    public class Kite : Rhombus
     {
         //Fields
         private double _b;

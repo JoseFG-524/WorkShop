@@ -1,6 +1,6 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Parallelogram : Rectangle
+    public class Parallelogram : Rectangle
     {
         //Fields
         private double _h;

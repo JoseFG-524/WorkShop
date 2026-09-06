@@ -19,9 +19,7 @@
         //Public Methods
         public override string ToString()
         {
-            return $"{Name}\n" +
-               $"  => Area.....: {GetArea(),11:N5}\n" +
-               $"  => Perimeter: {GetPerimiter(),11:N5}\n";
+            return $"{Name,-15} => Area.....: {GetArea(),12:N5}    Perimeter: {GetPerimiter(),11:N5}";
         }
 
         public abstract double GetArea();

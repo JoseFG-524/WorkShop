@@ -1,6 +1,6 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Triangle : Rectangle
+    public class Triangle : Rectangle
     {
         //Fields
         private double _c;

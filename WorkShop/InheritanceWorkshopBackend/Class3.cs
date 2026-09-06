@@ -1,6 +1,6 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Square : GeometricFigure
+    public class Square : GeometricFigure
     {
         //Fields
         private double _a;

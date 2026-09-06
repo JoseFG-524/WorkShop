@@ -1,6 +1,6 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Circle : GeometricFigure
+    public class Circle : GeometricFigure
     {
         //Fields
         private double _r;

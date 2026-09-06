@@ -1,6 +1,6 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Rhombus : Square
+    public class Rhombus : Square
     {
         //Fields
         private double _d1;

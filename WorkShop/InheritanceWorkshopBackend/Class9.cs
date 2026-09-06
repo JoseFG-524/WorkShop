@@ -1,6 +1,6 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Trapeze : Triangle
+    public class Trapeze : Triangle
     {
         //Fields
         private double _d;
