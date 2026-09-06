@@ -1,12 +1,12 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Circle
+    internal class Circle : GeometricFigure
     {
         //Fields
-        private int _r;
+        private double _r;
 
         //Properties
-        public int R
+        public double R
         { 
             get => _r; 
             set => _r = ValidateR(value); 

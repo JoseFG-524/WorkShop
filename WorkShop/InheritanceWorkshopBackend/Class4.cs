@@ -1,46 +1,51 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Rhombus
+    internal class Rhombus : Square
     {
         //Fields
-        private int _d1;
-        private int _d2;
+        private double _d1;
+        private double _d2;
 
         //Properties
-        public int D1
+        public double D1
         {
-            get;
-            set;
+            get => _d1;
+            set => _d1 = ValidateD1(value);
         }
-        public int D2
+        public double D2
         {
-            get;
-            set;
+            get => _d2;
+            set => _d2 = ValidateD2(value);
         }
 
         //Public Methods
-        public int GetArea()
+        public override double GetArea() 
         {
-
+            return (D1 * D2) / 2.0;
         }
-        public int GetPerimeter()
+        public override double GetPerimiter() 
         {
-
+            return 4 * A;
         }
-        public int Rhombus()
+        public Rhombus(string name, double a, double d1, double d2) : base(name, a)
         {
-
+            D1 = d1;
+            D2 = d2;
         }
 
         //Private Methods
 
-        private int ValidateD1()
+        private double ValidateD1(double d1)
         {
-
+            if (d1 <= 0)
+                throw new Exception("La diagonal 1 debe ser mayor que cero.");
+            return d1;
         }
-        private int ValidateD2()
+        private double ValidateD2(double d2)
         {
-
+            if (d2 <= 0)
+                throw new Exception("La diagonal 2 debe ser mayor que cero.");
+            return d2;
         }
     }
 }

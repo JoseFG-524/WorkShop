@@ -1,36 +1,39 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Parallelogram
+    internal class Parallelogram : Rectangle
     {
         //Fields
-        private int _h;
+        private double _h;
 
         //Properties
-        public int H
+        public double H
         {
-            get;
-            set;
+            get => _h;
+            set => _h = ValidateH(value);
         }
 
         //Public Methods
-        public int GetArea()
+        public override double GetArea() 
         {
-
+            return B * H;
         }
-        public int GetPerimeter()
+        public override double GetPerimiter() 
         {
-
+            return 2 * (A + B);
         }
-        public int Parallelogram()
+        public Parallelogram(string name, double a, double b, double h) 
+        : base(name, a, b)
         {
-
+            H = h; 
         }
 
         //Private Methods
 
-        private int ValidateH()
+        private double ValidateH(double h)
         {
-
+            if (h <= 0)
+                throw new Exception("La altura H debe ser mayor que cero.");
+            return h;
         }
     }
 }

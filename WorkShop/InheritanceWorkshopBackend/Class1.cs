@@ -4,16 +4,16 @@
     {
 
         //Properties
-        public int Name
+        public string Name
         {
             get;
             set;
         }
 
         //Constructors
-        protected GeometricFigure()
+        protected GeometricFigure(string name)
         {
-
+            Name = name;
         }
 
         //Public Methods
@@ -24,14 +24,9 @@
                $"  => Perimeter: {GetPerimiter(),11:N5}\n";
         }
 
-        public int GetArea() 
-        { 
-        
-        }
+        public abstract double GetArea();
 
-        public abstract int GetPerimeter() 
-        { 
-        
-        }
+        public abstract double GetPerimiter();
+
     }
 }

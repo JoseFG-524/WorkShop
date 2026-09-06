@@ -3,10 +3,10 @@
     internal class Square : GeometricFigure
     {
         //Fields
-        private int _a;
+        private double _a;
 
         //Properties
-        public int A
+        public double A
         {
             get => _a;
             set => _a = ValidateA(value);
@@ -21,14 +21,14 @@
         {
             return 4 * A;
         }
-        public int Square(string name, double a) : base(name)
+        public Square(string name, double a) : base(name)
         {
             A = a;
         }
 
         //Private Methods
 
-        private int ValidateA(double a)
+        private double ValidateA(double a)
         {
             if (a <= 0)
                 throw new Exception("El lado debe ser mayor que cero.");

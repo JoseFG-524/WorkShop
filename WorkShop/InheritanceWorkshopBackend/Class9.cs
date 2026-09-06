@@ -1,36 +1,39 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Trapeze
+    internal class Trapeze : Triangle
     {
         //Fields
-        private int _d;
+        private double _d;
 
         //Properties
-        public int D
+        public double D
         {
-            get;
-            set;
+            get => _d;
+            set => _d = ValidateD(value);
         }
 
         //Public Methods
-        public int GetArea()
+        public override double GetArea() 
         {
-
+            return ((B + D) * H) / 2.0;
         }
-        public int GetPerimeter()
+        public override double GetPerimiter() 
         {
-
+            return A + B + C + D;
         }
-        public int Trapeze()
+        public Trapeze(string name, double a, double b, double c, double d, double h) 
+        : base(name, a, b, c, h)
         {
-
+            D = d;
         }
 
         //Private Methods
 
-        private int ValidateD()
+        private double ValidateD(double d)
         {
-
+            if (d <= 0)
+                throw new Exception("El lado D debe ser mayor que cero.");
+            return d;
         }
     }
 }

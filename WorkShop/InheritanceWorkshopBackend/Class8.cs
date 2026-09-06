@@ -1,45 +1,51 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Triangle
+    internal class Triangle : Rectangle
     {
         //Fields
-        private int _c;
-        private int _h;
+        private double _c;
+        private double _h;
 
         //Properties
-        public int C
+        public double C
         {
-            get;
-            set;
+            get => _c;
+            set => _c = ValidateC(value);
         }
-        public int H
+        public double H
         {
-            get;
-            set;
+            get => _h;
+            set => _h = ValidateH(value);
         }
 
         //Public Methods
-        public int GetArea()
+        public override double GetArea() 
         {
-
+            return (B * H) / 2.0;
         }
-        public int GetPerimeter()
+        public override double GetPerimiter()
         {
-
+            return A + B + C;
         }
-        public int Triangle()
+        public Triangle(string name, double a, double b, double c, double h) 
+        : base(name, a, b)
         {
-
+            C = c;
+            H = h;
         }
 
         //Private Methods
-        private int ValidateC()
+        private double ValidateC(double c)
         {
-
+            if (c <= 0)
+                throw new Exception("El lado C debe ser mayor que cero.");
+            return c;
         }
-        private int ValidateH()
+        private double ValidateH(double h)
         {
-
+            if (h <= 0)
+                throw new Exception("La altura H debe ser mayor que cero.");
+            return h;
         }
     }
 }

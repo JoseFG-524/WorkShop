@@ -1,36 +1,38 @@
 ﻿namespace InheritanceWorkshopBackend
 {
-    internal class Rectangle
+    internal class Rectangle : Square
     {
         //Fields
-        private int _b;
+        private double _b;
 
         //Properties
-        public int B
+        public double B
         {
-            get;
-            set;
+            get => _b;
+            set => _b = ValidateB(value);
         }
 
         //Public Methods
-        public int GetArea()
+        public override double GetArea()
         {
-
+            return A * B;
         }
-        public int GetPerimeter()
+        public override double GetPerimiter()
         {
-
+            return 2 * (A + B);
         }
-        public int Rectangle()
+        public Rectangle(string name, double a, double b) : base(name, a)
         {
-
+            B = b;
         }
 
         //Private Methods
 
-        private int ValidateB()
+        private double ValidateB(double b)
         {
-
+            if (b <= 0)
+                throw new Exception("El lado B debe ser mayor que cero.");
+            return b;
         }
     }
 }
